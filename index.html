@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Drum Machine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main id="drum-machine">
+        <header class="machine-header">
+            <div class="brand-mark" aria-hidden="true">◎</div>
+            <div>
+                <p class="eyebrow">RHYTHM LAB <span>•</span> 001</p>
+                <h1>Drum machine</h1>
+            </div>
+            <div class="status"><span class="status-light"></span> READY</div>
+        </header>
+
+        <section class="machine-body" aria-label="Drum machine controls">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">SOUND BANK</p>
+                    <h2>Tap into a groove</h2>
+                </div>
+                <p class="keyboard-hint"><span class="hint-icon">↵</span> OR USE YOUR KEYBOARD</p>
+            </div>
+
+            <div id="pad-bank">
+                <button class="drum-pad" id="Q" aria-label="Q, Heater 1">
+                    <span class="pad-key">Q</span><span class="pad-name">HEATER 1</span>
+                    <audio src="" class="clip"></audio>
+                </button>
+                <button class="drum-pad" id="W" aria-label="W, Heater 2">
+                    <span class="pad-key">W</span><span class="pad-name">HEATER 2</span>
+                    <audio src="" class="clip"></audio>
+                </button>
+                <button class="drum-pad" id="E" aria-label="E, Heater 3">
+                    <span class="pad-key">E</span><span class="pad-name">HEATER 3</span>
+                    <audio src="" class="clip"></audio>
+                </button>
+                <button class="drum-pad" id="A" aria-label="A, Heater 4">
+                    <span class="pad-key">A</span><span class="pad-name">HEATER 4</span>
+                    <audio src="" class="clip"></audio>
+                </button>
+                <button class="drum-pad" id="S" aria-label="S, Clap">
+                    <span class="pad-key">S</span><span class="pad-name">CLAP</span>
+                    <audio src="" class="clip"></audio>
+                </button>
+                <button class="drum-pad" id="D" aria-label="D, Open hi-hat">
+                    <span class="pad-key">D</span><span class="pad-name">OPEN HH</span>
+                    <audio src="" class="clip"></audio>
+                </button>
+                <button class="drum-pad" id="Z" aria-label="Z, Kick and hat">
+                    <span class="pad-key">Z</span><span class="pad-name">KICK + HAT</span>
+                    <audio src="" class="clip"></audio>
+                </button>
+                <button class="drum-pad" id="X" aria-label="X, Kick">
+                    <span class="pad-key">X</span><span class="pad-name">KICK</span>
+                    <audio src="" class="clip"></audio>
+                </button>
+                <button class="drum-pad" id="C" aria-label="C, Closed hi-hat">
+                    <span class="pad-key">C</span><span class="pad-name">CLOSED HH</span>
+                    <audio src="" class="clip"></audio>
+                </button>
+            </div>
+
+            <section class="groove-library" aria-labelledby="groove-title">
+                <div class="groove-heading">
+                    <div>
+                        <p class="eyebrow">GET IN THE POCKET</p>
+                        <h2 id="groove-title">Groove library</h2>
+                    </div>
+                    <button class="stop-button" id="stop-pattern" type="button" disabled>STOP</button>
+                </div>
+                <p class="groove-intro">Each groove is one bar of 16 steps. Press play to hear it, or follow the keys in order.</p>
+                <div class="groove-legend" aria-label="Drum key legend">
+                    <span><kbd>X</kbd> Kick</span>
+                    <span><kbd>S</kbd> Clap</span>
+                    <span><kbd>C</kbd> Closed hi-hat</span>
+                    <span><kbd>D</kbd> Open hi-hat</span>
+                </div>
+                <div id="groove-list" class="groove-list"></div>
+            </section>
+
+            <div class="machine-footer">
+                <div class="now-playing">
+                    <span class="playing-indicator" aria-hidden="true"><i></i><i></i><i></i></span>
+                    <div>
+                        <p class="eyebrow">NOW PLAYING</p>
+                        <p id="display" aria-live="polite">Select a pad to start</p>
+                    </div>
+                </div>
+                <p class="footer-note">9 SAMPLES <span>·</span> INFINITE GROOVES</p>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
